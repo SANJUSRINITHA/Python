@@ -1,0 +1,12 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    maxscore = -100
+    runner = -100
+    for x in arr:
+        if x > maxscore:
+            runner = maxscore
+            maxscore = x
+        elif (x< maxscore and x > runner):
+            runner = x
+    print (runner)

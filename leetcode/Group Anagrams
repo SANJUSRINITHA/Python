@@ -1,0 +1,10 @@
+class Solution(object):
+    def groupAnagrams(self, strs):
+        d={}
+        for s in strs:
+            temp= tuple(sorted(s))
+            if temp in d.keys():
+                d[temp].append(s)
+            else:
+                d[temp]=[s]
+        return [l for l in d.values()]
